@@ -81,7 +81,7 @@ class Client {
       errors.push('Okta Org URL not provided');
     }
 
-    if (!parsedConfig.client.token && !parsedConfig.client.authorizationMode === 'SSWS') {
+    if (!parsedConfig.client.token && parsedConfig.client.authorizationMode === 'SSWS') {
       errors.push('Okta API token not provided');
     }
 
